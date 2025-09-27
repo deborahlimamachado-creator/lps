@@ -24,31 +24,47 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* HERO: fundo azul com overlay e imagem */
+    /* HERO: azul sólido com overlay (sem imagem) */
     .page-hero {
       position: relative;
       min-height: 320px;
+      padding: 48px 0;
       display: grid;
       place-items: center;
       text-align: center;
       color: #fff;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-color: #0d47a1; /* azul base */
       overflow: hidden;
-      /* fallback azul caso a imagem não carregue */
-      background-color: #0d47a1;
     }
-    .page-hero .container { position: relative; z-index: 1; }
-
-    /* Removido o ::after com código inválido.
-       Se quiser, dá para intensificar o azul com um pseudo-elemento: */
     .page-hero::before {
       content: "";
       position: absolute; inset: 0;
-      /* camada azul translúcida por cima da foto */
-      background: linear-gradient(180deg, rgba(9,36,121,0.55), rgba(9,36,121,0.35));
+      background: linear-gradient(180deg, rgba(9,36,121,0.55), rgba(9,36,121,0.25));
       z-index: 0;
+    }
+    .page-hero .container { position: relative; z-index: 1; }
+
+    /* Acessórios básicos caso falte o styles.css */
+    .section { padding: 48px 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .page-title { font-size: 2rem; margin: 0 0 8px; }
+    .page-subtitle { max-width: 850px; margin: 0 auto; opacity: .95; }
+    .nav-container, .footer .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-brand { display: flex; align-items: center; gap: 8px; }
+    .nav-menu { list-style: none; display: flex; gap: 16px; margin: 0; padding: 0; }
+    .nav-link { text-decoration: none; color: #111; }
+    .nav-link.active { color: #0d47a1; font-weight: 600; }
+    .btn { display: inline-block; text-decoration: none; border: 1px solid transparent; border-radius: 999px; padding: 10px 18px; }
+    .btn-primary { background: #0d47a1; color: #fff; }
+    .btn-secondary { background: #fff; color: #0d47a1; border-color: #0d47a1; }
+    .btn-header { padding: 8px 16px; }
+    .about-content-detailed { display: grid; grid-template-columns: 1.2fr .8fr; gap: 24px; align-items: start; }
+    .values-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .location-content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+    .about-image, .location-img { width: 100%; height: auto; border-radius: 8px; object-fit: cover; }
+    @media (max-width: 900px) {
+      .about-content-detailed, .location-content { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -58,7 +74,7 @@
   <header class="header" role="banner">
     <nav class="nav-container" role="navigation" aria-label="Menu principal">
       <div class="nav-brand">
-        <img src="logo_gdf.png" alt="Logo GDF Garotos do Futuro" class="logo" loading="eager">
+        <img src="logo_gdf.png" alt="Logo GDF Garotos do Futuro" class="logo" loading="eager" style="height:36px; width:auto">
         <span class="brand-text">GDF</span>
       </div>
 
@@ -80,15 +96,8 @@
   </header>
 
   <main id="main-content">
-    <!-- HERO com gradiente azul + imagem correta -->
-    <section
-      class="page-hero"
-      style="
-        background-image:
-          linear-gradient(180deg, rgba(9,36,121,0.35), rgba(9,36,121,0.15)),
-          url('https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/476804104_2143222666093202_125491846275268822_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=rHASnVk9GtYQ7kNvwFOhmu8&_nc_oc=Adliw8eaEq9Kc9vEcOn-LVDf2bFERqM6OrmKvD9GsV9F8OyLWDCuspYL87U0tbaiaNe1mX6CA4K8JGvGyJxTwQU2&_nc_zt=23&_nc_ht=scontent.fcpq4-1.fna&_nc_gid=pHwvitbKDD6i-EGQTD4XcQ&oh=00_AfbaNrjTzz2nSRxDEs3g_Lj88XDFhosAkH0I_iThMvS_LQ&oe=68DCE88F');
-      "
-    >
+    <!-- HERO azul sem imagem -->
+    <section class="page-hero">
       <div class="container">
         <h1 class="page-title">Nossa História</h1>
         <p class="page-subtitle">
@@ -129,6 +138,7 @@
           </div>
 
           <div class="about-image-section">
+            <!-- Mantive a imagem apenas nesta seção (não no hero). Pode trocar/retirar se preferir -->
             <img
               src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/476804104_2143222666093202_125491846275268822_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=rHASnVk9GtYQ7kNvwFOhmu8&_nc_oc=Adliw8eaEq9Kc9vEcOn-LVDf2bFERqM6OrmKvD9GsV9F8OyLWDCuspYL87U0tbaiaNe1mX6CA4K8JGvGyJxTwQU2&_nc_zt=23&_nc_ht=scontent.fcpq4-1.fna&_nc_gid=pHwvitbKDD6i-EGQTD4XcQ&oh=00_AfbaNrjTzz2nSRxDEs3g_Lj88XDFhosAkH0I_iThMvS_LQ&oe=68DCE88F"
               alt="Jovens participando de atividades do projeto GDF"
@@ -141,7 +151,7 @@
       </div>
     </section>
 
-    <!-- Ações Recorrentes (mantida) -->
+    <!-- Ações Recorrentes -->
     <section class="section actions-section">
       <div class="container">
         <h2 class="section-title">Ações Recorrentes</h2>
