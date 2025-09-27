@@ -22,6 +22,27 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      /* Garantia de exibição correta do hero mesmo sem CSS externo */
+      .page-hero {
+        position: relative;
+        min-height: 320px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: #fff;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .page-hero::after{
+        content:"";
+        position:absolute; inset:0;
+        background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.35));
+      }
+      .page-hero .container{ position:relative; z-index:1; }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -33,8 +54,8 @@
                 <span class="brand-text">GDF</span>
             </div>
             
+            <!-- corrigido: apenas um botão -->
             <button class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
-                <button class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -52,8 +73,8 @@
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="page-hero">
+        <!-- Hero Section | imagem trocada -->
+        <section class="page-hero" style="background-image: url('https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/476804104_2143222666093202_125491846275268822_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=rHASnVk9GtYQ7kNvwFOhmu8&_nc_oc=Adliw8eaEq9Kc9vEcOn-LVDf2bFERqM6OrmKvD9GsV9F8OyLWDCuspYL87U0tbaiaNe1mX6CA4K8JGvGyJxTwQU2&_nc_zt=23&_nc_ht=scontent.fcpq4-1.fna&_nc_gid=pHwvitbKDD6i-EGQTD4XcQ&oh=00_AfbaNrjTzz2nSRxDEs3g_Lj88XDFhosAkH0I_iThMvS_LQ&oe=68DCE88F');">
             <div class="container">
                 <h1 class="page-title">Nossa História</h1>
                 <p class="page-subtitle">
@@ -110,7 +131,7 @@
             </div>
         </section>
 
-        <!-- Ações Recorrentes -->
+        <!-- Ações Recorrentes (mantida) -->
         <section class="section actions-section">
             <div class="container">
                 <h2 class="section-title">Ações Recorrentes</h2>
@@ -142,52 +163,7 @@
             </div>
         </section>
 
-        <!-- Nossas Campanhas -->
-        <section class="section campaigns-section">
-            <div class="container">
-                <h2 class="section-title">Nossas Campanhas</h2>
-                <div class="campaigns-grid">
-                    <article class="campaign-card">
-                        <img src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Campanha Natal Feliz com presentes para crianças" 
-                             class="campaign-image" loading="lazy">
-                        <div class="campaign-content">
-                            <h3 class="campaign-title">Campanha Natal Feliz</h3>
-                            <p class="campaign-text">
-                                Nossa principal campanha natalina visa proporcionar um Natal mais feliz para as crianças atendidas pelo projeto, distribuindo presentes e promovendo momentos especiais.
-                            </p>
-                            <a href="contato.html" class="btn btn-outline">Saiba mais</a>
-                        </div>
-                    </article>
-
-                    <article class="campaign-card">
-                        <img src="https://images.pexels.com/photos/8617639/pexels-photo-8617639.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Jovens em aulas esportivas do projeto" 
-                             class="campaign-image" loading="lazy">
-                        <div class="campaign-content">
-                            <h3 class="campaign-title">Aulas Esportivas</h3>
-                            <p class="campaign-text">
-                                Programa permanente de atividades esportivas que desenvolve habilidades físicas, sociais e emocionais, promovendo a inclusão social através do esporte.
-                            </p>
-                            <a href="contato.html" class="btn btn-outline">Saiba mais</a>
-                        </div>
-                    </article>
-
-                    <article class="campaign-card">
-                        <img src="https://images.pexels.com/photos/8617641/pexels-photo-8617641.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                             alt="Atividades de mentoria e educação com jovens" 
-                             class="campaign-image" loading="lazy">
-                        <div class="campaign-content">
-                            <h3 class="campaign-title">Mentoria & Educação</h3>
-                            <p class="campaign-text">
-                                Programa de mentoria e apoio educacional que oferece orientação profissional e desenvolvimento de habilidades para preparar jovens para o mercado de trabalho.
-                            </p>
-                            <a href="contato.html" class="btn btn-outline">Saiba mais</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <!-- REMOVIDO: Seção "Nossas Campanhas" (matérias/novidades) -->
 
         <!-- Sede e Atendimentos -->
         <section class="section location-section">
