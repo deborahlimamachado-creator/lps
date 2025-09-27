@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - GDF Garotos do Futuro | Entre em contato conosco</title>
+    <meta name="description" content="Fale com a equipe do GDF para dúvidas, parcerias e doações. WhatsApp: (16) 99394-3715 | E-mail: gdfgarotosdofuturo123@gmail.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gdfgarotosdofuturo.com.br/contato.html">
+    <meta property="og:title" content="Contato - GDF Garotos do Futuro">
+    <meta property="og:description" content="Entre em contato conosco para dúvidas, parcerias e doações. Responderemos o quanto antes.">
+    <meta property="og:image" content="https://gdfgarotosdofuturo.com.br/assets/gdf-og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gdfgarotosdofuturo.com.br/contato.html">
+    <meta property="twitter:title" content="Contato - GDF Garotos do Futuro">
+    <meta property="twitter:description" content="Entre em contato conosco para dúvidas, parcerias e doações.">
+    <meta property="twitter:image" content="https://gdfgarotosdofuturo.com.br/assets/gdf-og-image.jpg">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Menu principal">
+            <div class="nav-brand">
+                <img src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/391600376_828421782617475_5708180630143571836_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9JT_akChBh8Q7kNvwEtoyCW&_nc_oc=Adkg7jns8eyXZZDcJKCZMMgpfzGFGltkxOkkzQXZ-hwUn8TvoNae7TzgkRbRkJYYVAilkzHCz67dAIhAjaNofR_W&_nc_zt=23&_nc_ht=scontent.fcpq4-1.fna&_nc_gid=MYplPqIyed_s9g6P2MpthQ&oh=00_AfZV0lDfc6xyRzfT4VpYkQw6A3NvRwmVOaNfqN4qruPvIA&oe=68DCF394" alt="Logo GDF Garotos do Futuro" class="logo" loading="eager">
+                <span class="brand-text">GDF</span>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Início</a></li>
+                <li><a href="doacoes.html" class="nav-link">Doações</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                <li><a href="contato.html" class="nav-link active" aria-current="page">Contato</a></li>
+            </ul>
+            
+            <a href="doacoes.html" class="btn btn-primary btn-header">Doe agora</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Entre em Contato</h1>
+                <p class="page-subtitle">
+                    Fale com a equipe do GDF para dúvidas, parcerias e doações. Responderemos o quanto antes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="section contact-form-section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-form-container">
+                        <h2 class="section-title">Envie sua mensagem</h2>
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Seu nome *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    required 
+                                    aria-describedby="name-error"
+                                    autocomplete="name"
+                                >
+                                <span class="form-error" id="name-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Seu telefone (WhatsApp) *</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    class="form-input" 
+                                    required 
+                                    aria-describedby="phone-error phone-help"
+                                    autocomplete="tel"
+                                    placeholder="(16) 99999-9999"
+                                >
+                                <small id="phone-help" class="form-help">Incluindo DDD</small>
+                                <span class="form-error" id="phone-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required 
+                                    aria-describedby="email-error"
+                                    autocomplete="email"
+                                    placeholder="seu@email.com"
+                                >
+                                <span class="form-error" id="email-error" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Sua mensagem *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-textarea" 
+                                    required 
+                                    aria-describedby="message-error message-help"
+                                    rows="6"
+                                    placeholder="Digite sua mensagem..."
+                                ></textarea>
+                                <small id="message-help" class="form-help">Conte-nos como podemos ajudar</small>
+                                <span class="form-error" id="message-error" aria-live="polite"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-large form-submit">
+                                Enviar mensagem
+                            </button>
+
+                            <div class="form-success" id="form-success" aria-live="polite" style="display: none;">
+                                <p>✅ Recebemos sua mensagem! Responderemos em breve.</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Quick Contact Cards -->
+                    <div class="contact-cards">
+                        <h2 class="section-title">Contato rápido</h2>
+                        
+                        <div class="contact-card">
+                            <div class="contact-icon">💬</div>
+                            <h3 class="contact-card-title">WhatsApp</h3>
+                            <p class="contact-card-text">Fale conosco diretamente pelo WhatsApp</p>
+                            <a href="https://wa.me/5516993943715" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                                (16) 99394-3715
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">✉️</div>
+                            <h3 class="contact-card-title">E-mail</h3>
+                            <p class="contact-card-text">Envie um e-mail para nossa equipe</p>
+                            <a href="mailto:gdfgarotosdofuturo123@gmail.com" class="btn btn-outline">
+                                Enviar e-mail
+                            </a>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">📍</div>
+                            <h3 class="contact-card-title">Endereço</h3>
+                            <address class="contact-card-text">
+                                Rua Amadeu Amaral, 236<br>
+                                Vila Seixas – Ribeirão Preto/SP
+                            </address>
+                            <p class="contact-note">Atendimento mediante agendamento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section">
+            <div class="container">
+                <h2 class="section-title">Perguntas frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Como posso fazer uma doação?</h3>
+                        <p class="faq-answer">
+                            Você pode fazer doações de materiais diretamente em nossa sede ou agendar a retirada. Para doações financeiras, oferecemos PagSeguro e transferência bancária. 
+                            <a href="doacoes.html">Veja mais detalhes na página de doações</a>.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Como posso ser voluntário?</h3>
+                        <p class="faq-answer">
+                            Entre em contato conosco via WhatsApp ou e-mail para conhecer as oportunidades de voluntariado. Sempre precisamos de ajuda em atividades esportivas, educacionais e eventos especiais.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Quem pode participar das atividades?</h3>
+                        <p class="faq-answer">
+                            Nosso foco são crianças e jovens em situação de vulnerabilidade social. As atividades são gratuitas e abertas para a comunidade. Entre em contato para mais informações sobre inscrições.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">Vocês fazem parcerias com empresas?</h3>
+                        <p class="faq-answer">
+                            Sim! Estamos sempre abertos a parcerias com empresas que queiram contribuir para nossa causa. Entre em contato para discutirmos como sua empresa pode apoiar nossos projetos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Vamos construir juntos</h2>
+                    <p class="cta-text">Sua participação, doação ou parceria faz a diferença na vida de muitas crianças e jovens.</p>
+                    <a href="doacoes.html" class="btn btn-primary btn-large">Doe agora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3 class="footer-title">Sobre nós</h3>
+                    <p class="footer-text">
+                        GDF – Garotos do Futuro é um Projeto Social e ONG de Ribeirão Preto/SP que auxilia jovens em situação de vulnerabilidade, promovendo educação, esporte e desenvolvimento social.
+                    </p>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contato</h3>
+                    <address class="footer-address">
+                        <p>Rua Amadeu Amaral, 236<br>Vila Seixas – Ribeirão Preto/SP</p>
+                        <p>
+                            <a href="tel:+5516993943715" class="footer-link">(16) 99394-3715</a><br>
+                            <a href="mailto:gdfgarotosdofuturo123@gmail.com" class="footer-link">gdfgarotosdofuturo123@gmail.com</a>
+                        </p>
+                    </address>
+                </div>
+
+                <div class="footer-donate">
+                    <h3 class="footer-title">Doações</h3>
+                    <a href="#" class="btn btn-outline btn-small" title="Doar via PagSeguro">PagSeguro</a>
+                    <p class="footer-bank-info">Dados bancários disponíveis por e-mail</p>
+                </div>
+
+                <div class="footer-social">
+                    <h3 class="footer-title">Redes sociais</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook do GDF" title="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram do GDF" title="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="Twitter do GDF" title="Twitter">🐦</a>
+                        <a href="mailto:gdfgarotosdofuturo123@gmail.com" class="social-link" aria-label="E-mail do GDF" title="E-mail">✉️</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-rights">© GDF Garotos do Futuro – Ribeirão Preto/SP. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
